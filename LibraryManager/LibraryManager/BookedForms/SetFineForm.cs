@@ -54,13 +54,14 @@ namespace LibraryManager
 
         private void btnCountBooked_Click(object sender, EventArgs e)
         {
-            if (txtFineBooked.Text == "")
+            double count;
+            if (txtFineBooked.Text == "" || !(Double.TryParse(txtFineBooked.Text, out count)))
             {
-                MessageBox.Show("Fine field is empty");
+                MessageBox.Show("Fine field is empty or wrong data");
             }
             else
             {
-                txtResultBooked.Text = ((DateTime.Now - _booked.dueBooked).TotalDays * Convert.ToInt32(txtFineBooked.Text)).ToString();
+                txtResultBooked.Text = ((DateTime.Now - _booked.dueBooked).TotalDays * count).ToString();
             }
         }
     }

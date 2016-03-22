@@ -51,6 +51,7 @@
             this.pnlMainBooked = new System.Windows.Forms.Panel();
             this.dataGridViewBooked = new System.Windows.Forms.DataGridView();
             this.pnlMenuBooked = new System.Windows.Forms.Panel();
+            this.btnSetFineBooked = new System.Windows.Forms.Button();
             this.btnCancelBooked = new System.Windows.Forms.Button();
             this.btnAddBooked = new System.Windows.Forms.Button();
             this.cmbFilterBooked = new System.Windows.Forms.ComboBox();
@@ -74,7 +75,6 @@
             this.cmbFilterMembers = new System.Windows.Forms.ComboBox();
             this.btnSearchMembers = new System.Windows.Forms.Button();
             this.txtSearchMembers = new System.Windows.Forms.TextBox();
-            this.btnSetFineBooked = new System.Windows.Forms.Button();
             this.MainTabControl.SuspendLayout();
             this.tPgBooks.SuspendLayout();
             this.pnlMenuBooks.SuspendLayout();
@@ -202,6 +202,7 @@
             this.txtSearchBooks.Name = "txtSearchBooks";
             this.txtSearchBooks.Size = new System.Drawing.Size(140, 26);
             this.txtSearchBooks.TabIndex = 0;
+            this.txtSearchBooks.Validating += new System.ComponentModel.CancelEventHandler(this.txtSearchBooks_Validating);
             // 
             // pnlInfoBooks
             // 
@@ -278,18 +279,21 @@
             this.BookName.DataPropertyName = "Name";
             this.BookName.HeaderText = "Name";
             this.BookName.Name = "BookName";
+            this.BookName.ReadOnly = true;
             // 
             // Author
             // 
             this.Author.DataPropertyName = "Author";
             this.Author.HeaderText = "Author";
             this.Author.Name = "Author";
+            this.Author.ReadOnly = true;
             // 
             // Genre
             // 
             this.Genre.DataPropertyName = "Genre";
             this.Genre.HeaderText = "Genre";
             this.Genre.Name = "Genre";
+            this.Genre.ReadOnly = true;
             // 
             // YearPublished
             // 
@@ -298,6 +302,7 @@
             this.YearPublished.FillWeight = 20F;
             this.YearPublished.HeaderText = "Year ";
             this.YearPublished.Name = "YearPublished";
+            this.YearPublished.ReadOnly = true;
             this.YearPublished.Width = 66;
             // 
             // Publisher
@@ -305,6 +310,7 @@
             this.Publisher.DataPropertyName = "Publisher";
             this.Publisher.HeaderText = "Publisher";
             this.Publisher.Name = "Publisher";
+            this.Publisher.ReadOnly = true;
             // 
             // tPgBooked
             // 
@@ -367,6 +373,19 @@
             this.pnlMenuBooked.Name = "pnlMenuBooked";
             this.pnlMenuBooked.Size = new System.Drawing.Size(879, 40);
             this.pnlMenuBooked.TabIndex = 9;
+            // 
+            // btnSetFineBooked
+            // 
+            this.btnSetFineBooked.BackColor = System.Drawing.Color.White;
+            this.btnSetFineBooked.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnSetFineBooked.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSetFineBooked.Location = new System.Drawing.Point(258, 5);
+            this.btnSetFineBooked.Name = "btnSetFineBooked";
+            this.btnSetFineBooked.Size = new System.Drawing.Size(120, 28);
+            this.btnSetFineBooked.TabIndex = 9;
+            this.btnSetFineBooked.Text = "Set Fine";
+            this.btnSetFineBooked.UseVisualStyleBackColor = false;
+            this.btnSetFineBooked.Click += new System.EventHandler(this.btnSetFineBooked_Click);
             // 
             // btnCancelBooked
             // 
@@ -506,6 +525,7 @@
             this.PassportId.DataPropertyName = "PassportId";
             this.PassportId.HeaderText = "Passport";
             this.PassportId.Name = "PassportId";
+            this.PassportId.ReadOnly = true;
             this.PassportId.Width = 87;
             // 
             // FirstName
@@ -513,12 +533,14 @@
             this.FirstName.DataPropertyName = "FirstName";
             this.FirstName.HeaderText = "Name";
             this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
             // 
             // SecondName
             // 
             this.SecondName.DataPropertyName = "SecondName";
             this.SecondName.HeaderText = "Surname";
             this.SecondName.Name = "SecondName";
+            this.SecondName.ReadOnly = true;
             // 
             // DateOfMembership
             // 
@@ -526,6 +548,7 @@
             this.DateOfMembership.DataPropertyName = "DateOfMembership";
             this.DateOfMembership.HeaderText = "Register Date";
             this.DateOfMembership.Name = "DateOfMembership";
+            this.DateOfMembership.ReadOnly = true;
             // 
             // pnlInfoMembers
             // 
@@ -639,19 +662,6 @@
             this.txtSearchMembers.Name = "txtSearchMembers";
             this.txtSearchMembers.Size = new System.Drawing.Size(140, 26);
             this.txtSearchMembers.TabIndex = 0;
-            // 
-            // btnSetFineBooked
-            // 
-            this.btnSetFineBooked.BackColor = System.Drawing.Color.White;
-            this.btnSetFineBooked.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnSetFineBooked.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetFineBooked.Location = new System.Drawing.Point(258, 5);
-            this.btnSetFineBooked.Name = "btnSetFineBooked";
-            this.btnSetFineBooked.Size = new System.Drawing.Size(120, 28);
-            this.btnSetFineBooked.TabIndex = 9;
-            this.btnSetFineBooked.Text = "Set Fine";
-            this.btnSetFineBooked.UseVisualStyleBackColor = false;
-            this.btnSetFineBooked.Click += new System.EventHandler(this.btnSetFineBooked_Click);
             // 
             // MainForm
             // 

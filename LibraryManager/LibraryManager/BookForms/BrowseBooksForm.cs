@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using LibraryManager.Entities;
 using LibraryManager.Repositories;
 using System.Configuration;
+using System.Text.RegularExpressions;
 
 namespace LibraryManager
 {
@@ -24,9 +25,16 @@ namespace LibraryManager
 
         private void btnSearchBooks_Click(object sender, EventArgs e)
         {
-            IEnumerable<BookInfo> bookList = _bookRepository.SelectBooksInfo(cmbFilterBooks.Text, txtSearchBooks.Text);
-            dataGridViewBooks.ClearSelection();
-            dataGridViewBooks.DataSource = bookList;
+            if (!Regex.IsMatch(txtSearchBooks.Text, @"^[a-zA-Z0-9]+$"))
+            {
+                MessageBox.Show("Wrong data in search");
+            }
+            else
+            {
+                IEnumerable<BookInfo> bookList = _bookRepository.SelectBooksInfo(cmbFilterBooks.Text, txtSearchBooks.Text);
+                dataGridViewBooks.ClearSelection();
+                dataGridViewBooks.DataSource = bookList;
+            }
         }
 
         private void btnGetId_Click(object sender, EventArgs e)

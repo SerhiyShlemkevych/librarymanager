@@ -54,9 +54,10 @@ namespace LibraryManager
 
         private void btnEditBook_Click(object sender, EventArgs e)
         {
-            if (txtNameBook.Text == "")
+            int year;
+            if (txtNameBook.Text == "" || !(Int32.TryParse(txtYearBook.Text, out year)))
             {
-                MessageBox.Show("One of * fields are empty");
+                MessageBox.Show("One of * fields are empty or wrong data");
             }
 
             else
@@ -69,7 +70,7 @@ namespace LibraryManager
                 {
                     _bookToEdit.Photo = ImageManager.ImageToByteArray(pcBPhotoBook.Image);
                 }
-                _bookToEdit.YearPublished = (txtYearBook.Text == "") ? 0 : Convert.ToInt32(txtYearBook.Text);
+                _bookToEdit.YearPublished = year;
                 _bookToEdit.Status = 1;
 
                 _bookRepository.EditBook(_bookToEdit);                

@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using LibraryManager.Entities;
 using LibraryManager.Repositories;
 using System.Configuration;
+using System.Text.RegularExpressions;
 
 namespace LibraryManager
 {
@@ -41,9 +42,16 @@ namespace LibraryManager
 
         private void btnSearchBooks_Click(object sender, EventArgs e)
         {
-            IEnumerable<BookInfo> bookList = _bookRepository.SelectBooksInfo(cmbFilterBooks.Text, txtSearchBooks.Text);
-            dataGridViewBooks.ClearSelection();
-            dataGridViewBooks.DataSource = bookList;
+            if (!Regex.IsMatch(txtSearchBooks.Text, @"^[a-zA-Z0-9]+$"))
+            {
+                MessageBox.Show("Wrong data in search");
+            }
+            else
+            {
+                IEnumerable<BookInfo> bookList = _bookRepository.SelectBooksInfo(cmbFilterBooks.Text, txtSearchBooks.Text);
+                dataGridViewBooks.ClearSelection();
+                dataGridViewBooks.DataSource = bookList;
+            }
         }
 
         private void btnAddBook_Click(object sender, EventArgs e)
@@ -95,9 +103,16 @@ namespace LibraryManager
 
         private void btnSearchMembers_Click(object sender, EventArgs e)
         {
-            IEnumerable<MemberIdInfo> memberList = _memberRepository.SelectMembersIdInfo(cmbFilterMembers.Text, txtSearchMembers.Text);
-            dataGridViewMembers.ClearSelection();
-            dataGridViewMembers.DataSource = memberList;
+            if (!Regex.IsMatch(txtSearchMembers.Text, @"^[a-zA-Z0-9]+$"))
+            {
+                MessageBox.Show("Wrong data in search");
+            }
+            else
+            {
+                IEnumerable<MemberIdInfo> memberList = _memberRepository.SelectMembersIdInfo(cmbFilterMembers.Text, txtSearchMembers.Text);
+                dataGridViewMembers.ClearSelection();
+                dataGridViewMembers.DataSource = memberList;
+            }
         }
 
         private void btnMember_Click(object sender, EventArgs e)
@@ -178,10 +193,17 @@ namespace LibraryManager
         }
 
         private void btnSearchBooked_Click(object sender, EventArgs e)
-        {            
-            IEnumerable <BookedInfo> bookedList = _bookedRepository.SelectInfo(cmbFilterBooked.Text, txtSearchBooked.Text);
-            dataGridViewBooked.ClearSelection();
-            dataGridViewBooked.DataSource = bookedList;
+        {
+            if (!Regex.IsMatch(txtSearchBooked.Text, @"^[a-zA-Z0-9]+$"))
+            {
+                MessageBox.Show("Wrong data in search");
+            }
+            else
+            {
+                IEnumerable<BookedInfo> bookedList = _bookedRepository.SelectInfo(cmbFilterBooked.Text, txtSearchBooked.Text);
+                dataGridViewBooked.ClearSelection();
+                dataGridViewBooked.DataSource = bookedList;
+            }
         }
 
 
@@ -214,5 +236,10 @@ namespace LibraryManager
         }
 
         #endregion
+
+        private void txtSearchBooks_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            
+        }
     }
 }

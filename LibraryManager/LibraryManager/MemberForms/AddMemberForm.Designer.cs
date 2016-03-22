@@ -209,7 +209,6 @@
             this.txtDateMember.ReadOnly = true;
             this.txtDateMember.Size = new System.Drawing.Size(145, 29);
             this.txtDateMember.TabIndex = 26;
-            this.txtDateMember.Text = "dd-mm-yy";
             // 
             // txtPhoneMember
             // 

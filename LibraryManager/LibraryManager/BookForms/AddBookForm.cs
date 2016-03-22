@@ -20,9 +20,10 @@ namespace LibraryManager
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
-            if(txtNameBook.Text == "" || txtAmountBook.Text == "" || txtAuthorBook.Text == "")
+            int year;
+            if(txtNameBook.Text == "" || txtAmountBook.Text == "" || txtAuthorBook.Text == "" || !(Int32.TryParse(txtYearBook.Text, out year)))
             {
-                MessageBox.Show("One of * fields are empty");
+                MessageBox.Show("One of * fields are empty or wrong data");
             }
 
             else
@@ -36,7 +37,7 @@ namespace LibraryManager
                 {
                     book.Photo = ImageManager.ImageToByteArray(pcBPhotoBook.Image);
                 }
-                book.YearPublished = (txtYearBook.Text == "") ? 0 : Convert.ToInt32(txtYearBook.Text);
+                book.YearPublished = year;
                 book.Status = 1;
 
 
