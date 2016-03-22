@@ -1,0 +1,10 @@
+E:\programs\Studio_Programs\LibraryManager\LibraryManager\bin\Debug\LibraryManager.exe.config
+E:\programs\Studio_Programs\LibraryManager\LibraryManager\bin\Debug\LibraryManager.exe
+E:\programs\Studio_Programs\LibraryManager\LibraryManager\bin\Debug\LibraryManager.pdb
+E:\programs\Studio_Programs\LibraryManager\LibraryManager\obj\Debug\LibraryManager.DesktopUI.csprojResolveAssemblyReference.cache
+E:\programs\Studio_Programs\LibraryManager\LibraryManager\obj\Debug\LibraryManager.LoginForm.resources
+E:\programs\Studio_Programs\LibraryManager\LibraryManager\obj\Debug\LibraryManager.MainForm.resources
+E:\programs\Studio_Programs\LibraryManager\LibraryManager\obj\Debug\LibraryManager.Properties.Resources.resources
+E:\programs\Studio_Programs\LibraryManager\LibraryManager\obj\Debug\LibraryManager.DesktopUI.csproj.GenerateResource.Cache
+E:\programs\Studio_Programs\LibraryManager\LibraryManager\obj\Debug\LibraryManager.exe
+E:\programs\Studio_Programs\LibraryManager\LibraryManager\obj\Debug\LibraryManager.pdb

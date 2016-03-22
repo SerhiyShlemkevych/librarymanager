@@ -1,0 +1,8 @@
+E:\programs\Studio_Programs\LibraryManager\LibraryManager.Repositories\bin\Debug\LibraryManager.Repositories.dll
+E:\programs\Studio_Programs\LibraryManager\LibraryManager.Repositories\bin\Debug\LibraryManager.Repositories.pdb
+E:\programs\Studio_Programs\LibraryManager\LibraryManager.Repositories\bin\Debug\LibraryManager.Entities.dll
+E:\programs\Studio_Programs\LibraryManager\LibraryManager.Repositories\bin\Debug\LibraryManager.Entities.pdb
+E:\programs\Studio_Programs\LibraryManager\LibraryManager.Repositories\obj\Debug\LibraryManager.Repositories.csprojResolveAssemblyReference.cache
+E:\programs\Studio_Programs\LibraryManager\LibraryManager.Repositories\obj\Debug\LibraryManager.Repositories.dll
+E:\programs\Studio_Programs\LibraryManager\LibraryManager.Repositories\obj\Debug\LibraryManager.Repositories.pdb
+E:\programs\Studio_Programs\LibraryManager\LibraryManager.Repositories\bin\Debug\LibraryManager.Repositories.dll.config
