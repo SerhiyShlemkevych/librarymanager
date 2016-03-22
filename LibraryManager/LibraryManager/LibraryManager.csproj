@@ -173,13 +173,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LibraryManager.DataBase\LibraryManager.DataBase.sqlproj">
-      <Project>{914a284a-95ff-4aab-88cb-72a230dedaac}</Project>
-      <Name>LibraryManager.DataBase</Name>
-    </ProjectReference>
     <ProjectReference Include="..\LibraryManager.Entities\LibraryManager.Entities.csproj">
       <Project>{bfe942a6-6cda-45a9-aa93-5651d6005c07}</Project>
       <Name>LibraryManager.Entities</Name>
