@@ -17,6 +17,7 @@ namespace LibraryManager.Repositories
             _connectionString = connectionString;
         }
 
+        //no check if input args are null
         public IEnumerable<Member> SelectMembers(string filterName, string filterValue)
         {
             string MemberQuery;
@@ -185,6 +186,7 @@ namespace LibraryManager.Repositories
         {
             if (passport == "")
             {
+                //use more specific exception
                 throw new Exception("There is no passport information");
             }
 

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibraryManager.Entities
 {
+    //class name has to noun or adj+noun
     public class Booked
     {
         public int Id { get; set; }

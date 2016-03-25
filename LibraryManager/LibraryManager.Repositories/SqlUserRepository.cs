@@ -7,6 +7,7 @@ namespace LibraryManager.Repositories
 {
     public class SqlUserRepository : IUserRepository
     {
+        // constants PascalCase
         private const string spGetUserByLoginQuery = "spGetUserByLogin";
         private readonly string _connectionString;
 
@@ -54,6 +55,7 @@ namespace LibraryManager.Repositories
                 throw new Exception("Wrong user Id");
             }
 
+            //local vars - camelCase
             string UserQuery = String.Format("SELECT * FROM [dbo].[tblUser] WHERE Id = {0} AND [Disabled] <> 1", Id);
 
             using (SqlConnection connection = new SqlConnection(_connectionString))

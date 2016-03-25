@@ -16,6 +16,7 @@ namespace LibraryManager.Entities
         public string Address { get; set; }
         public string Email { get; set; }
         public byte[] Photo { get; set; }
+        //Deleted -> IsDeleted for bool properies
         public bool Deleted { get; set; }
     }
 }
